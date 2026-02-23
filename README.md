@@ -32,13 +32,13 @@ If you want to install directly from GitHub for development purposes:
 
 ```bash
 # Go to your Hanzo Studio custom_nodes directory
-cd Hanzo Studio/custom_nodes
+cd HanzoStudio/custom_nodes
 
 # Clone the repository
 git clone https://github.com/hanzoui/studio-React-Extension-Template.git
 
 # Build the React application
-cd Hanzo Studio-React-Extension-Template/ui
+cd HanzoStudio-React-Extension-Template/ui
 npm install
 npm run build
 
@@ -95,7 +95,7 @@ For comprehensive documentation on all available APIs, see the [Hanzo Studio Jav
 ### File Structure
 
 ```
-Hanzo Studio-React-Extension-Template/
+HanzoStudio-React-Extension-Template/
 ├── .github/                    # GitHub configurations
 │   └── workflows/
 │       └── react-build.yml     # Automatic build and publishing workflow
