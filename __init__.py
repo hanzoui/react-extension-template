@@ -13,7 +13,7 @@ dist_path = os.path.join(workspace_path, "dist/example_ext")
 dist_locales_path = os.path.join(workspace_path, "dist/locales")
 
 # Print the current paths for debugging
-print(f"Hanzo Studio_example_frontend_extension workspace path: {workspace_path}")
+print(f"HanzoStudio_example_frontend_extension workspace path: {workspace_path}")
 print(f"Dist path: {dist_path}")
 print(f"Dist locales path: {dist_locales_path}")
 print(f"Locales exist: {os.path.exists(dist_locales_path)}")
