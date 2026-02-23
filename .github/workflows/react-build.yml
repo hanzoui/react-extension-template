@@ -1,3 +1,4 @@
+# Secrets: Hanzo KMS (kms.hanzo.ai) — auth via Hanzo IAM
 name: React Extension Build + Publish to Comfy Registry
 
 on:
@@ -16,6 +17,13 @@ jobs:
         node-version: [18.x]
 
     steps:
+    - name: Fetch secrets from Hanzo KMS
+      id: kms
+      uses: hanzoui/.github/actions/kms-secrets@main
+      with:
+        kms_client_id: ${{ secrets.KMS_CLIENT_ID }}
+        kms_client_secret: ${{ secrets.KMS_CLIENT_SECRET }}
+        secrets: 'REGISTRY_ACCESS_TOKEN'
     - uses: actions/checkout@v4
 
     - name: Use Node.js ${{ matrix.node-version }}
@@ -36,5 +44,5 @@ jobs:
     - name: Publish Custom Node
       uses: hanzoui/publish-node-action@main
       with:
-        personal_access_token: ${{ secrets.REGISTRY_ACCESS_TOKEN }}
+        personal_access_token: ${{ steps.kms.outputs.REGISTRY_ACCESS_TOKEN }}
         skip_checkout: 'true'
