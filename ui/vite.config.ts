@@ -6,7 +6,7 @@ interface RewriteComfyImportsOptions {
   isDev: boolean;
 }
 
-// Plugin to correctly handle the ComfyUI scripts in development mode
+// Plugin to correctly handle the Hanzo Studio scripts in development mode
 const rewriteComfyImports = ({ isDev }: RewriteComfyImportsOptions) => {
   return {
     name: "rewrite-comfy-imports",
@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     emptyOutDir: true,
     rollupOptions: {
-      // Don't bundle ComfyUI scripts - they will be loaded from the ComfyUI server
+      // Don't bundle Hanzo Studio scripts - they will be loaded from the Hanzo Studio server
       external: ['/scripts/app.js', '/scripts/api.js'],
       input: {
         main: path.resolve(__dirname, 'src/main.tsx'),

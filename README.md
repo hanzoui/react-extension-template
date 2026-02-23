@@ -1,28 +1,28 @@
-# ComfyUI React Extension Template
+# Hanzo Studio React Extension Template
 
-![react-example-demo](https://github.com/Comfy-Org/ComfyUI-React-Extension-Template/blob/assets-branch/docs/demo.gif)
+![react-example-demo](https://github.com/hanzoui/studio-React-Extension-Template/blob/assets-branch/docs/demo.gif)
 
-![demo pic](https://github.com/Comfy-Org/ComfyUI-React-Extension-Template/blob/assets-branch/react-example-demo.png)
+![demo pic](https://github.com/hanzoui/studio-React-Extension-Template/blob/assets-branch/react-example-demo.png)
 
-A minimal template for creating React/TypeScript frontend extensions for ComfyUI, with complete boilerplate setup.
+A minimal template for creating React/TypeScript frontend extensions for Hanzo Studio, with complete boilerplate setup.
 
-📚 **[ComfyUI JavaScript Developer Documentation](https://docs.comfy.org/custom-nodes/js/javascript_overview)** - Learn how to use ComfyUI's powerful extension APIs.
+📚 **[Hanzo Studio JavaScript Developer Documentation](https://docs.hanzo.ai/custom-nodes/js/javascript_overview)** - Learn how to use Hanzo Studio's powerful extension APIs.
 
 ## Features
 
-- **React & TypeScript Integration**: Ready-to-use setup for creating modern UI components within ComfyUI
+- **React & TypeScript Integration**: Ready-to-use setup for creating modern UI components within Hanzo Studio
 - **Internationalization Framework**: Built-in i18n support with English and Chinese examples
-- **ComfyUI API Integration**: Properly typed access to ComfyUI's internal API
-- **Full TypeScript Support**: Type-safe code using ComfyUI's official type definitions
+- **Hanzo Studio API Integration**: Properly typed access to Hanzo Studio's internal API
+- **Full TypeScript Support**: Type-safe code using Hanzo Studio's official type definitions
 - **Auto-Reload Development**: Watch mode for seamless development experience
 
 ## Installation
 
-### From ComfyUI Registry (Recommended)
+### From Hanzo Registry (Recommended)
 
-The easiest way to install this extension is through the ComfyUI Manager:
+The easiest way to install this extension is through the Hanzo Manager:
 
-1. Open ComfyUI and go to the Manager
+1. Open Hanzo Studio and go to the Manager
 2. Search for "React Extension Template"
 3. Click Install
 
@@ -31,27 +31,27 @@ The easiest way to install this extension is through the ComfyUI Manager:
 If you want to install directly from GitHub for development purposes:
 
 ```bash
-# Go to your ComfyUI custom_nodes directory
-cd ComfyUI/custom_nodes
+# Go to your Hanzo Studio custom_nodes directory
+cd Hanzo Studio/custom_nodes
 
 # Clone the repository
-git clone https://github.com/Comfy-Org/ComfyUI-React-Extension-Template.git
+git clone https://github.com/hanzoui/studio-React-Extension-Template.git
 
 # Build the React application
-cd ComfyUI-React-Extension-Template/ui
+cd Hanzo Studio-React-Extension-Template/ui
 npm install
 npm run build
 
-# Restart ComfyUI
+# Restart Hanzo Studio
 ```
 
-⚠️ **Important**: When installing manually from GitHub, you **must** run `npm run build` in the `ui/` directory before the extension will work. The extension requires the compiled React code in the `dist/` folder to function properly in ComfyUI.
+⚠️ **Important**: When installing manually from GitHub, you **must** run `npm run build` in the `ui/` directory before the extension will work. The extension requires the compiled React code in the `dist/` folder to function properly in Hanzo Studio.
 
 ## Usage
 
 This template includes a simple example extension that displays workflow node statistics. After installation:
 
-1. Look for the "React Example" tab in the ComfyUI sidebar
+1. Look for the "React Example" tab in the Hanzo Studio sidebar
 2. Click to open the example UI
 
 When developing your own extension, you can:
@@ -74,15 +74,15 @@ npm install
 npm run watch
 ```
 
-### Available ComfyUI Extension APIs
+### Available Hanzo Studio Extension APIs
 
-This template provides access to ComfyUI's powerful JavaScript APIs through the official type definitions. You can use these APIs to build rich extensions:
+This template provides access to Hanzo Studio's powerful JavaScript APIs through the official type definitions. You can use these APIs to build rich extensions:
 
 - **Sidebar Tabs**: Create custom sidebar panels like this template demonstrates
 - **Bottom Bar Panels**: Add panels to the bottom of the UI
 - **Top Menu Items**: Add custom entries to the top menu
 - **Context Menus**: Create custom context menus for the graph
-- **Settings**: Add settings to the ComfyUI settings panel
+- **Settings**: Add settings to the Hanzo Studio settings panel
 - **Toasts**: Display notification messages
 - **Commands**: Create and register custom commands
 - **Hotkeys/Keybindings**: Register custom keyboard shortcuts
@@ -90,17 +90,17 @@ This template provides access to ComfyUI's powerful JavaScript APIs through the 
 - **App Events**: Listen to and respond to app events
 - **Graph Manipulation**: Programmatically manipulate the workflow graph
 
-For comprehensive documentation on all available APIs, see the [ComfyUI JavaScript Developer Documentation](https://docs.comfy.org/custom-nodes/js/javascript_overview).
+For comprehensive documentation on all available APIs, see the [Hanzo Studio JavaScript Developer Documentation](https://docs.hanzo.ai/custom-nodes/js/javascript_overview).
 
 ### File Structure
 
 ```
-ComfyUI-React-Extension-Template/
+Hanzo Studio-React-Extension-Template/
 ├── .github/                    # GitHub configurations
 │   └── workflows/
 │       └── react-build.yml     # Automatic build and publishing workflow
-├── __init__.py                 # Python entry point for ComfyUI integration
-├── pyproject.toml              # Project metadata for ComfyUI Registry
+├── __init__.py                 # Python entry point for Hanzo Studio integration
+├── pyproject.toml              # Project metadata for Hanzo Registry
 ├── dist/                       # Built extension files (generated)
 └── ui/                         # React application
     ├── public/
@@ -131,25 +131,25 @@ ComfyUI-React-Extension-Template/
 
 ### TypeScript Support
 
-This extension uses the official `@comfyorg/comfyui-frontend-types` package for type-safe interaction with ComfyUI APIs. To install it:
+This extension uses the official `@hanzoui/hanzo-studio-frontend-types` package for type-safe interaction with Hanzo Studio APIs. To install it:
 
 ```bash
 cd ui
-npm install -D @comfyorg/comfyui-frontend-types
+npm install -D @hanzoui/hanzo-studio-frontend-types
 ```
 
-## Publishing to ComfyUI Registry
+## Publishing to Hanzo Registry
 
 ### Prerequisites
 
-1. Set up a [Registry](https://registry.comfy.org) account
-2. Create an API key at https://registry.comfy.org/nodes
+1. Set up a [Registry](https://registry.hanzo.ai) account
+2. Create an API key at https://registry.hanzo.ai/nodes
 
 ### Steps to Publish
 
-1. Install the comfy-cli tool:
+1. Install the hanzo-cli tool:
    ```bash
-   pip install comfy-cli
+   pip install hanzo-cli
    ```
 
 2. Verify your pyproject.toml has the correct metadata:
@@ -167,14 +167,14 @@ npm install -D @comfyorg/comfyui-frontend-types
 
 3. Publish your extension:
    ```bash
-   comfy-cli publish
+   hanzo-cli publish
    ```
 
 4. When prompted, enter your API key
 
 ### Automatic Publishing with GitHub Actions
 
-This template includes a GitHub Actions workflow that automatically publishes to the ComfyUI Registry whenever you update the version in pyproject.toml:
+This template includes a GitHub Actions workflow that automatically publishes to the Hanzo Registry whenever you update the version in pyproject.toml:
 
 1. Go to your repository's Settings > Secrets and variables > Actions
 2. Create a new repository secret called `REGISTRY_ACCESS_TOKEN` with your API key
@@ -188,7 +188,7 @@ The workflow automatically:
 1. Sets up Node.js environment
 2. Installs dependencies (`npm install`)
 3. Builds the React extension (`npm run build`)
-4. Publishes the extension to the ComfyUI Registry
+4. Publishes the extension to the Hanzo Registry
 
 ## Unit Testing
 
@@ -206,14 +206,14 @@ Example tests can be found in the `src/__tests__` directory. The setup includes:
 
 - Jest for running tests
 - React Testing Library for testing components
-- Mock implementation of the ComfyUI window.app object
+- Mock implementation of the Hanzo Studio window.app object
 
 ## Resources
 
-- [ComfyUI JS Extension Documentation](https://docs.comfy.org/custom-nodes/js/javascript_overview) - Official documentation for ComfyUI JavaScript Extensions
-- [ComfyUI Registry Documentation](https://docs.comfy.org/registry/publishing) - Learn how to publish your extension
-- [ComfyUI Frontend Repository](https://github.com/Comfy-Org/ComfyUI-Frontend) - The main ComfyUI frontend codebase
-- [Official ComfyUI Frontend Types](https://www.npmjs.com/package/@comfyorg/comfyui-frontend-types) - TypeScript definitions for ComfyUI
+- [Hanzo Studio JS Extension Documentation](https://docs.hanzo.ai/custom-nodes/js/javascript_overview) - Official documentation for Hanzo Studio JavaScript Extensions
+- [Hanzo Registry Documentation](https://docs.hanzo.ai/registry/publishing) - Learn how to publish your extension
+- [Hanzo Frontend Repository](https://github.com/hanzoui/studio-Frontend) - The main Hanzo Studio frontend codebase
+- [Official Hanzo Frontend Types](https://www.npmjs.com/package/@hanzoui/hanzo-studio-frontend-types) - TypeScript definitions for Hanzo Studio
 - [React Extension Guide](REACT_EXTENSION_GUIDE.md) - Detailed guide for creating React extensions
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - [React Documentation](https://react.dev/reference/react)

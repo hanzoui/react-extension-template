@@ -1,4 +1,4 @@
-import { ComfyApp } from '@comfyorg/comfyui-frontend-types'
+import { ComfyApp } from '@hanzoui/hanzo-studio-frontend-types'
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { useTranslation } from 'react-i18next'
@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import './index.css'
 import './utils/i18n'
 
-// Declare global ComfyUI objects
+// Declare global Hanzo Studio objects
 declare global {
   interface Window {
     app?: ComfyApp
@@ -54,12 +54,12 @@ function waitForInit(): Promise<void> {
 // Initialize the extension once everything is ready
 async function initializeExtension(): Promise<void> {
   try {
-    // Wait for document and ComfyUI app
+    // Wait for document and Hanzo Studio app
     await waitForInit()
     console.log('App:', window.app)
 
     if (!window.app) {
-      console.error('ComfyUI app not available')
+      console.error('Hanzo Studio app not available')
       return
     }
 
@@ -70,9 +70,9 @@ async function initializeExtension(): Promise<void> {
       return <App />
     }
 
-    // Register the sidebar tab using ComfyUI's extension API
+    // Register the sidebar tab using Hanzo Studio's extension API
     const sidebarTab = {
-      id: 'comfyui-react-example',
+      id: 'hanzo-studio-react-example',
       icon: 'pi pi-code', // Using PrimeVue icon
       title: 'React Example',
       tooltip: 'React Example Extension',
@@ -81,7 +81,7 @@ async function initializeExtension(): Promise<void> {
         console.log('Rendering React Example Extension')
         // Create a container for our React app
         const container = document.createElement('div')
-        container.id = 'comfyui-react-example-root'
+        container.id = 'hanzo-studio-react-example-root'
         container.style.height = '100%'
         element.appendChild(container)
 
@@ -101,16 +101,16 @@ async function initializeExtension(): Promise<void> {
     // Register extension with about page badges
     window.app.registerExtension({
       name: 'ReactExtensionExample',
-      // About Panel Badges API - Adds custom badges to the ComfyUI about page
+      // About Panel Badges API - Adds custom badges to the Hanzo Studio about page
       aboutPageBadges: [
         {
           label: 'Documentation',
-          url: 'https://docs.comfy.org/custom-nodes/js/javascript_overview',
+          url: 'https://docs.hanzo.ai/custom-nodes/js/javascript_overview',
           icon: 'pi pi-file'
         },
         {
           label: 'GitHub',
-          url: 'https://github.com/Comfy-Org/ComfyUI-React-Extension-Template',
+          url: 'https://github.com/hanzoui/studio-React-Extension-Template',
           icon: 'pi pi-github'
         },
         {

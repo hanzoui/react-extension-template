@@ -1,7 +1,7 @@
 // Import jest-dom additions
 import '@testing-library/jest-dom';
 
-// Mock window.app for ComfyUI integration testing
+// Mock window.app for Hanzo Studio integration testing
 global.window.app = {
   graph: {
     _nodes: []

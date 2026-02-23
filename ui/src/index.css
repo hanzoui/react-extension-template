@@ -10,7 +10,7 @@
 }
 
 /* Light mode overrides */
-:root.comfy-theme-light #comfyui-react-example-root {
+:root.comfy-theme-light #hanzo-studio-react-example-root {
   --example-primary-color: #2980b9;
   --example-secondary-color: #34495e;
   --example-text-color: #2c3e50;
@@ -20,14 +20,14 @@
   --example-muted-text-color: #7f8c8d;
 }
 
-/* Make sure our styles don't leak out to the rest of ComfyUI */
-#comfyui-react-example-root {
+/* Make sure our styles don't leak out to the rest of Hanzo Studio */
+#hanzo-studio-react-example-root {
   height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   color: var(--example-text-color);
 }
 
-#comfyui-react-example-root * {
+#hanzo-studio-react-example-root * {
   box-sizing: border-box;
 }

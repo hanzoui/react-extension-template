@@ -9,10 +9,10 @@ function DummyComponent({ text }: { text: string }) {
 
 describe('Dummy Component', () => {
   it('renders with provided text', () => {
-    const { getByTestId } = render(<DummyComponent text="Hello ComfyUI!" />)
+    const { getByTestId } = render(<DummyComponent text="Hello Hanzo Studio!" />)
 
     const element = getByTestId('dummy-component')
     expect(element).toBeInTheDocument()
-    expect(element).toHaveTextContent('Hello ComfyUI!')
+    expect(element).toHaveTextContent('Hello Hanzo Studio!')
   })
 })

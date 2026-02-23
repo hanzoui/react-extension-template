@@ -1,10 +1,10 @@
-import { ComfyApp } from '@comfyorg/comfyui-frontend-types'
+import { ComfyApp } from '@hanzoui/hanzo-studio-frontend-types'
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import './App.css'
 
-// Type definitions for the global ComfyUI objects
+// Type definitions for the global Hanzo Studio objects
 declare global {
   interface Window {
     app?: ComfyApp
@@ -131,7 +131,7 @@ function App() {
     string | number | null
   >(null)
 
-  // Get nodes from ComfyUI graph and organize them
+  // Get nodes from Hanzo Studio graph and organize them
   useEffect(() => {
     if (!window.app?.graph) return
 
