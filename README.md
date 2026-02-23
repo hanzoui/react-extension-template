@@ -1,8 +1,8 @@
 # Hanzo Studio React Extension Template
 
-![react-example-demo](https://github.com/hanzoui/studio-React-Extension-Template/blob/assets-branch/docs/demo.gif)
+![react-example-demo](https://github.com/hanzoui/react-extension-template/blob/assets-branch/docs/demo.gif)
 
-![demo pic](https://github.com/hanzoui/studio-React-Extension-Template/blob/assets-branch/react-example-demo.png)
+![demo pic](https://github.com/hanzoui/react-extension-template/blob/assets-branch/react-example-demo.png)
 
 A minimal template for creating React/TypeScript frontend extensions for Hanzo Studio, with complete boilerplate setup.
 
@@ -35,7 +35,7 @@ If you want to install directly from GitHub for development purposes:
 cd HanzoStudio/custom_nodes
 
 # Clone the repository
-git clone https://github.com/hanzoui/studio-React-Extension-Template.git
+git clone https://github.com/hanzoui/react-extension-template.git
 
 # Build the React application
 cd HanzoStudio-React-Extension-Template/ui
@@ -212,7 +212,7 @@ Example tests can be found in the `src/__tests__` directory. The setup includes:
 
 - [Hanzo Studio JS Extension Documentation](https://docs.hanzo.ai/custom-nodes/js/javascript_overview) - Official documentation for Hanzo Studio JavaScript Extensions
 - [Hanzo Registry Documentation](https://docs.hanzo.ai/registry/publishing) - Learn how to publish your extension
-- [Hanzo Frontend Repository](https://github.com/hanzoui/studio-Frontend) - The main Hanzo Studio frontend codebase
+- [Hanzo Frontend Repository](https://github.com/hanzoui/frontend) - The main Hanzo Studio frontend codebase
 - [Official Hanzo Frontend Types](https://www.npmjs.com/package/@hanzoui/hanzo-studio-frontend-types) - TypeScript definitions for Hanzo Studio
 - [React Extension Guide](REACT_EXTENSION_GUIDE.md) - Detailed guide for creating React extensions
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)

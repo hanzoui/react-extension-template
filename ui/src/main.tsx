@@ -110,7 +110,7 @@ async function initializeExtension(): Promise<void> {
         },
         {
           label: 'GitHub',
-          url: 'https://github.com/hanzoui/studio-React-Extension-Template',
+          url: 'https://github.com/hanzoui/react-extension-template',
           icon: 'pi pi-github'
         },
         {
